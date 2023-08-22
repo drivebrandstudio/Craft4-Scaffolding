@@ -1,7 +1,4 @@
 module.exports = {
   map: false,
-  plugins: {
-    'postcss-aspect-ratio-property':{},
-    'autoprefixer': {}
-  }
-}
+  plugins: [require("autoprefixer"), require("tailwindcss")],
+};

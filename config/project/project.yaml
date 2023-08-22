@@ -1,4 +1,4 @@
-dateModified: 1681753059
+dateModified: 1692718753
 email:
   fromEmail: daniel@drivebrandstudio.com
   fromName: 'Craft4 Scaffolding Ddev'
@@ -9,6 +9,10 @@ meta:
     cc5695ce-fe88-4b1b-a774-d1d2d549da00: 'Craft4 Scaffolding Ddev' # Craft4 Scaffolding Ddev
     f7f984ab-6cc7-49df-97b0-7b95511d8403: Common # Common
 plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
   vite:
     edition: standard
     enabled: true
