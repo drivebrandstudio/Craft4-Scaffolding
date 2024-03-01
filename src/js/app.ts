@@ -1,7 +1,6 @@
 // LIBRARY IMPORTS
 import barba, { ITransitionPage } from "@barba/core";
 import { gsap } from "gsap";
-import $ from "jquery";
 
 // CUSTOM CODE IMPORTS
 
@@ -85,7 +84,7 @@ barba.init({
 });
 
 // When the site first loads, this code will run
-barba.hooks.once(() => { });
+barba.hooks.once((data: any) => { });
 
 // After any transition, rerun any JS over the newly rendered elements
-barba.hooks.enter(() => {});
+barba.hooks.after((data: any) => {});

@@ -1,3 +1,5 @@
+import react from "@vitejs/plugin-react";
+import ViteRestart from "vite-plugin-restart";
 import viteCompression from "vite-plugin-compression";
 
 export default ({ command }) => ({
@@ -15,6 +17,8 @@ export default ({ command }) => ({
         app: "/src/js/app.js",
         // Need css here so we can load the css synchronously before the JS and first render, preventing a flicker.
         css: "/src/scss/main.scss",
+        // If we want to use react, have to pull it in
+        react: "/src/react/index.tsx",
       },
       output: { sourcemap: true },
     },
@@ -26,6 +30,7 @@ export default ({ command }) => ({
     strictPort: true,
   },
   plugins: [
+    react(),
     // Look at templates and js/scss files for changes while running the dev server for HMR
     ViteRestart({
       reload: ["./templates/**/*", "./src/**/*"],

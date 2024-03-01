@@ -11,7 +11,7 @@ return [
     'cacheKeySuffix' => '',
     'devServerInternal' => '',
     'checkDevServer' => false,
-    'includeReactRefreshShim' => false,
+    'includeReactRefreshShim' => true,
     'includeModulePreloadShim' => true,
     'criticalPath' => '@webroot/dist/criticalcss',
     'criticalSuffix' =>'_critical.min.css',
