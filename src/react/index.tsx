@@ -351,7 +351,8 @@ function Ready() {
             </Link>
           </div>
         </footer>
-      </div>
+          </div>
+          <Link to='/'>home</Link>
     </>
   );
 }
