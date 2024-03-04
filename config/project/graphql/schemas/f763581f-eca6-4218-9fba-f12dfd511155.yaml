@@ -1,0 +1,7 @@
+isPublic: true
+name: 'Public Schema'
+scope:
+  - 'sites.ca348b20-8894-41e8-8cbd-4b61bda22ba5:read' # Craft4 Scaffolding Ddev
+  - 'elements.drafts:read'
+  - 'elements.revisions:read'
+  - 'elements.inactive:read'
