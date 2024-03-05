@@ -1,11 +1,11 @@
 
 # Drive Brand Studio CraftCMS V4 template
-### Last reviewed 2/16/2024
+### Last reviewed 3/5/2024
 
 ## Repository Structure
    `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
    `/config/` — CraftCMS config. This should be mostly left alone.    </br>
-   `/src/` — Un-minified JS and CSS files </br>
+   `/src/` — Un-minified JS, JSX and SCSS files </br>
    `/templates/` — Source code for our front-end, written in Twig. </br>
    `/web/` — the folder containing the generated minified documents for the website, as well as local assets (images, videos, etc) that are stored on the webserver (preferably, store them somewhere where storage is cheaper and make a network request to fetch I.E. put a video on youtube instead of in here)
 
@@ -24,6 +24,8 @@
    - Prettier... But be warned 🧹 — [prettier](https://prettier.io/)
    - Prettier Plugin by Melody  — [prettier-plugin-twig-melody](https://github.com/trivago/prettier-plugin-twig-melody?tab=readme-ov-file#install)
    - Node V14+, I recommend using NVM to install and manage — [NVM]([https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
+   - React
+   - GraphQL
 
 
 ## Style Guide
