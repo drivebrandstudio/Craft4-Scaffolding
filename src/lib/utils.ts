@@ -1,3 +1,5 @@
+// SHADCN UI GENERATED CODE
+
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 

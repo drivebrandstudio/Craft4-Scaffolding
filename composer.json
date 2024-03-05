@@ -2,6 +2,7 @@
   "require": {
     "craftcms/cms": "4.8.0",
     "craftcms/redactor": "^3.0",
+    "craftcms/webhooks": "3.0.5",
     "ether/seo": "4.2.2",
     "nystudio107/craft-vite": "4.0.7",
     "putyourlightson/craft-sherlock": "4.2.0",
@@ -52,5 +53,12 @@
     "pre-install-cmd": "@pre-craft-update",
     "post-update-cmd": "@post-craft-update",
     "post-install-cmd": "@post-craft-update"
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }

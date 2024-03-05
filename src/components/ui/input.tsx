@@ -1,3 +1,5 @@
+// SHADCN UI GENERATED CODE
+
 import * as React from "react";
 
 import { cn } from "../../lib/utils";

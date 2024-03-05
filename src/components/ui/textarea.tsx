@@ -1,4 +1,6 @@
-import * as React from "react"
+// SHADCN UI GENERATED CODE
+
+import * as React from "react";
 
 import { cn } from "../../lib/utils";
 
@@ -16,9 +18,9 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         ref={ref}
         {...props}
       />
-    )
+    );
   }
-)
-Textarea.displayName = "Textarea"
+);
+Textarea.displayName = "Textarea";
 
-export { Textarea }
+export { Textarea };
