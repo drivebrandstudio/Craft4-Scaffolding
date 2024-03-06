@@ -1,4 +1,4 @@
-dateModified: 1709569084
+dateModified: 1709733775
 email:
   fromEmail: daniel@drivebrandstudio.com
   fromName: 'Craft4 Scaffolding Ddev'
@@ -19,6 +19,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  webhooks:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.4.0
 system:
   edition: solo
   live: true

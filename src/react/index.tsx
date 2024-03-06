@@ -40,7 +40,7 @@ ReactDOM.createRoot(document.querySelector("#root")!).render(
 // Here is where SSR would gain us value. Pull in JS libraries easily, utilize them, have the Server
 // return HTML to quickly render while we are fetching data to hydrate said HTML.
 /**
- * How to implement a React frontend with GraphQL
+ * How to implement a React frontend with GraphQL. Currently not using Server Components. Yet...
  * @returns html that renders as the app
  */
 function App() {
@@ -54,6 +54,7 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": "", // Get auth token from craftcms admin panel
       },
       body: JSON.stringify({
         query: "{ping}",
