@@ -8,6 +8,8 @@ import { Sheet, SheetTrigger, SheetContent } from "../components/ui/sheet";
 import { Card, CardContent, CardFooter } from "../components/ui/card";
 import "../js/app";
 
+const siteURL = process.env.PRIMARY_SITE_URL;
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,11 +52,11 @@ function App() {
   useEffect(() => {
     //   Vanilla Node.js implementation of generic 'ping' test in craftcms
     // data?.data?.ping
-    fetch("https://craft4-scaffolding.ddev.site/api", {
+    fetch(siteURL + "/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "", // Get auth token from craftcms admin panel
+        "Authorization": "Bearer somethingsomethingsomething", // Get auth token from craftcms admin panel
       },
       body: JSON.stringify({
         query: "{ping}",
