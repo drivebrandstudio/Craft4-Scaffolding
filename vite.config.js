@@ -1,6 +1,7 @@
 import react from "@vitejs/plugin-react";
 import ViteRestart from "vite-plugin-restart";
 import viteCompression from "vite-plugin-compression";
+import ViteRestart from 'vite-plugin-restart';
 
 export default ({ command }) => ({
   base: command === "serve" ? "" : "/dist/",
@@ -14,7 +15,7 @@ export default ({ command }) => ({
     // Which files should we be minifying
     rollupOptions: {
       input: {
-        app: "/src/js/app.js",
+        app: "/src/js/app.ts",
         // Need css here so we can load the css synchronously before the JS and first render, preventing a flicker.
         css: "/src/scss/main.scss",
         // If we want to use react, have to pull it in
