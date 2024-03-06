@@ -143,6 +143,8 @@
      ```shell
      make setup
      ```
+1. Update .env by adding
+     `CRAFT_ENVIRONMENT=dev`
 1. Run the project
      ```shell
       make dev
@@ -168,8 +170,9 @@
    ```shell
    ddev launch
    ```
-
-6. Navigate to /admin in the new web browser. If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
+8. Navigate to `/admin` within your browser. In the GraphQL tab, select Schemas and in the Private Schema, select all.
+9. Then, select the Tokens tab and create a new token. Name it something like 'Private'.
+10. Copy that token and paste it into L57 in index.tsx for `Authorization: "[PUT_IT_HERE]"`
 
 ## FAQ/Tips
 ### Errors during install
