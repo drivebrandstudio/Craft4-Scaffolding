@@ -172,7 +172,7 @@
    ```
 8. Navigate to `/admin` within your browser. In the GraphQL tab, select Schemas and in the Private Schema, select all.
 9. Then, select the Tokens tab and create a new token. Name it something like 'Private'.
-10. Copy that token and paste it into L57 in index.tsx for `Authorization: "[PUT_IT_HERE]"`
+10. Copy that token and paste it into L57 in index.tsx for `Authorization: "Bearer [PUT_IT_HERE]"`. When you copy with CraftCMS's copy button, you get the whole line. You only need the token value after `Bearer`.
 
 ## FAQ/Tips
 ### Errors during install
