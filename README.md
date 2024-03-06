@@ -128,7 +128,10 @@
       </p>
    </details>
 
-
+1. Checkout the with-tailwind branch with
+      ```shell
+      git checkout with-tailwind
+      ```
 1. Add empty .env file to the root of the project (next to .env.example)
 2. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
 3. Update package.json, make this project truly your own
@@ -136,11 +139,11 @@
     - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
     - author
     - description
-1. Configure the project with DDEV
+1. Configure the project
      ```shell
      make setup
      ```
-1. Run the project with
+1. Run the project
      ```shell
       make dev
      ```
