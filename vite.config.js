@@ -1,7 +1,6 @@
 import react from "@vitejs/plugin-react";
 import ViteRestart from "vite-plugin-restart";
 import viteCompression from "vite-plugin-compression";
-import ViteRestart from 'vite-plugin-restart';
 
 export default ({ command }) => ({
   base: command === "serve" ? "" : "/dist/",
