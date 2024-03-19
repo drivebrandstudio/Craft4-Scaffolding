@@ -11,10 +11,9 @@ export default ({ command, mode }) => {
     build: {
       emptyOutDir: true,
       // Create a manifest.json file for production build, needs to go in same spot as outDir
-      manifest: true,
-      // Where we want the bundled code to be put
-      outDir: "./web/dist/",
-      sourcemap: true,
+      manifest: "manifest.json", // Where we want the bundled code to be put
+      outDir: "./web/dist",
+      // sourcemap: true, // Bundle size balloons with this enabled
       // Which files should we be minifying
       rollupOptions: {
         input: {

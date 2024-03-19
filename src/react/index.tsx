@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   {
     path: "/testmobile",
     element: <TestMobile />,
-    errorElement: <div> set brokadidid</div>,
+    errorElement: <div> test brokadidid</div>,
   },
 ]);
 
@@ -56,7 +56,7 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer somethingsomethingsomething", // Get auth token from craftcms admin panel
+        // "Authorization": "Bearer somethingsomethingsomething", // Get auth token from craftcms admin panel
       },
       body: JSON.stringify({
         query: "{ping}",
