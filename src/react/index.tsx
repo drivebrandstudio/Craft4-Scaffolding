@@ -24,6 +24,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../components/ui/alert-dialog";
+import { ThemeProvider } from "../components/ui/theme-provider";
+import { ModeToggle } from "../components/ui/mode-toggle";
 
 const siteURL = process.env.PRIMARY_SITE_URL;
 
@@ -52,7 +54,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.querySelector("#root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ModeToggle />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
@@ -128,19 +133,19 @@ function Ready() {
           <nav className="ml-auto flex gap-4 sm:gap-6">
             <Link
               className="text-sm font-medium hover:underline underline-offset-4"
-              href="#"
+              to="#"
             >
               Services
             </Link>
             <Link
               className="text-sm font-medium hover:underline underline-offset-4"
-              href="#"
+              to="#"
             >
               Doctors
             </Link>
             <Link
               className="text-sm font-medium hover:underline underline-offset-4"
-              href="#"
+              to="#"
             >
               Contact
             </Link>
@@ -420,26 +425,26 @@ function Set() {
     <>
       <div className="flex flex-col min-h-[100dvh]">
         <header className="px-4 lg:px-6 h-14 flex items-center">
-          <Link className="flex items-center justify-center" href="#">
+          <Link className="flex items-center justify-center" to="#">
             <MountainIcon className="h-6 w-6" />
             <span className="sr-only">Health Clinic</span>
           </Link>
           <nav className="ml-auto flex gap-4 sm:gap-6">
             <Link
               className="text-sm font-medium hover:underline underline-offset-4 text-blue-500"
-              href="#"
+              to="#"
             >
               Services
             </Link>
             <Link
               className="text-sm font-medium hover:underline underline-offset-4 text-blue-500"
-              href="#"
+              to="#"
             >
               About Us
             </Link>
             <Link
               className="text-sm font-medium hover:underline underline-offset-4 text-blue-500"
-              href="#"
+              to="#"
             >
               Contact
             </Link>
@@ -544,7 +549,7 @@ function Set() {
                 </div>
                 <Link
                   className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                  href="#"
+                  to="#"
                 >
                   Tour the Clinic
                 </Link>
@@ -629,7 +634,7 @@ function Set() {
                   Sign up to get notified when we launch.
                   <Link
                     className="underline underline-offset-2 text-blue-500"
-                    href="#"
+                    to="#"
                   >
                     Terms & Conditions
                   </Link>
@@ -645,19 +650,19 @@ function Set() {
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
             <Link
               className="text-xs hover:underline underline-offset-4 text-blue-500"
-              href="#"
+              to="#"
             >
               Terms of Service
             </Link>
             <Link
               className="text-xs hover:underline underline-offset-4 text-blue-500"
-              href="#"
+              to="#"
             >
               Privacy
             </Link>
           </nav>
         </footer>
-      </div>{" "}
+      </div>
       <Link to="/testmobile">idk lets test mobile</Link>
     </>
   );
@@ -694,23 +699,23 @@ function TestMobile() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left">
-            <Link className="flex items-center font-bold" href="#">
+            <Link className="flex items-center font-bold" to="#">
               Home
             </Link>
             <nav className="grid gap-4 pt-4">
-              <Link className="flex items-center font-bold" href="#">
+              <Link className="flex items-center font-bold" to="#">
                 About
               </Link>
-              <Link className="flex items-center font-bold" href="#">
+              <Link className="flex items-center font-bold" to="#">
                 Projects
               </Link>
-              <Link className="flex items-center font-bold" href="#">
+              <Link className="flex items-center font-bold" to="#">
                 Contact
               </Link>
             </nav>
           </SheetContent>
         </Sheet>
-        <Link className="ml-auto hidden lg:flex" href="#">
+        <Link className="ml-auto hidden lg:flex" to="#">
           Home
         </Link>
       </header>
