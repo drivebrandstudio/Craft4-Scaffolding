@@ -26,6 +26,7 @@ import {
 } from "../components/ui/alert-dialog";
 import { ThemeProvider } from "../components/ui/theme-provider";
 import { ModeToggle } from "../components/ui/mode-toggle";
+import { CardRotation } from "./components/CardRotation";
 
 const siteURL = process.env.PRIMARY_SITE_URL;
 
@@ -188,6 +189,8 @@ function Ready() {
                   </AlertDialogContent>
                 </AlertDialog>
 
+                <h2 className="py-10">Card Rotation</h2>
+                <CardRotation />
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   We are committed to providing high-quality care with a
                   personalized touch.
