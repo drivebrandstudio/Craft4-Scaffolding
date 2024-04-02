@@ -7,6 +7,23 @@ import { Textarea } from "../components/ui/textarea";
 import { Sheet, SheetTrigger, SheetContent } from "../components/ui/sheet";
 import { Card, CardContent, CardFooter } from "../components/ui/card";
 import "../js/app";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../components/ui/accordion";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../components/ui/alert-dialog";
 
 const siteURL = process.env.PRIMARY_SITE_URL;
 
@@ -134,8 +151,38 @@ function Ready() {
             <div className="container flex flex-col items-center justify-center px-4 space-y-4 md:px-6">
               <div className="text-center">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  Your Health is Our Priority
+                  Here I will test all the ShadCN components as examples
                 </h1>
+
+                <h2 className="py-10">Accordion</h2>
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>first item</AccordionTrigger>
+                    <AccordionContent>TEst</AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger>second item</AccordionTrigger>
+                    <AccordionContent>secondTEst</AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <h2 className="py-10">Alert</h2>
+                <AlertDialog>
+                  <AlertDialogTrigger>test open</AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>The title</AlertDialogTitle>
+                      <AlertDialogDescription>
+                        Main content of hte dialog
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>cancel</AlertDialogCancel>
+                      <AlertDialogAction>continue</AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   We are committed to providing high-quality care with a
                   personalized touch.
@@ -334,35 +381,29 @@ function Ready() {
         </main>
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
           <nav className="flex gap-4 sm:gap-6">
-            <Link
-              className="text-xs hover:underline underline-offset-4"
-              href="#"
-            >
+            <Link className="text-xs hover:underline underline-offset-4" to="#">
               Terms of Service
             </Link>
-            <Link
-              className="text-xs hover:underline underline-offset-4"
-              href="#"
-            >
+            <Link className="text-xs hover:underline underline-offset-4" to="#">
               Privacy
             </Link>
           </nav>
           <div className="ml-auto flex gap-4 sm:gap-6">
             <Link
               className="text-xs hover:underline underline-offset-4 underline underline-offset-4"
-              href="#"
+              to="#"
             >
               Facebook
             </Link>
             <Link
               className="text-xs hover:underline underline-offset-4 underline underline-offset-4"
-              href="#"
+              to="#"
             >
               Twitter
             </Link>
             <Link
               className="text-xs hover:underline underline-offset-4 underline underline-offset-4"
-              href="#"
+              to="#"
             >
               Instagram
             </Link>
