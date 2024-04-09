@@ -2,6 +2,8 @@ import react from "@vitejs/plugin-react";
 import ViteRestart from "vite-plugin-restart";
 import viteCompression from "vite-plugin-compression";
 import { loadEnv } from "vite";
+import path from "path";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default ({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
@@ -43,6 +45,12 @@ export default ({ command, mode }) => {
       }),
       // Minify our JS + SCSS
       viteCompression(),
+      visualizer(),
     ],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
   };
 };

@@ -7,7 +7,8 @@
     "dev": "node emptyDistDir.js && node viteDevServerToggle.js 1 && vite --host",
     "build": "node viteDevServerToggle.js 0 && vite build",
     "lint": "vendor/bin/twig-linter lint ./templates",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze-bundle": "npx vite-bundle-visualizer"
   },
   "author": "Daniel Crump + Laura Bennett",
   "repository": {
@@ -88,13 +89,15 @@
     "react-dom": "^18.2.0",
     "react-resizable-panels": "^2.0.16",
     "react-router-dom": "^6.22.2",
+    "mini-svg-data-uri": "^1.4.4",
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.162.0",
     "three-globe": "^2.31.0",
     "vaul": "^0.9.0",
-    "vite-plugin-restart": "^0.4.0"
+    "vite-plugin-restart": "^0.4.0",
+    "vite-bundle-visualizer": "^1.1.0"
   },
   "browserslist": {
     "production": [

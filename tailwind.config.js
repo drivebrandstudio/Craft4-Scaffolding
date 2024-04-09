@@ -1,3 +1,4 @@
+const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -138,7 +139,11 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors, setUpUtilities],
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+    setUpUtilities,
+  ],
 };
 
 function addVariablesForColors({ addBase, theme }) {
@@ -151,6 +156,7 @@ function addVariablesForColors({ addBase, theme }) {
     ":root": newVars,
   });
 }
+
 function setUpUtilities({ matchUtilities, theme }) {
   matchUtilities(
     {
@@ -162,4 +168,4 @@ function setUpUtilities({ matchUtilities, theme }) {
     },
     { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
   );
-},
+}
